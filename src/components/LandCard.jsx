@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { mockData } from '../mockData';
+
 import { PiShareFatBold } from 'react-icons/pi';
 import { MdFavoriteBorder } from 'react-icons/md';
 import { MdFavorite } from 'react-icons/md';

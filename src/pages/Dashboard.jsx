@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import LandCard from '../components/LandCard';
 
-import { FadeLoader } from 'react-spinners';
+import { ClipLoader } from 'react-spinners';
 
 const Dashboard = () => {
   const [landData, setLandData] = useState([]);
@@ -46,7 +46,7 @@ const Dashboard = () => {
 
   return (
     <>
-      <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4'>
+      <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 py-2 m-2 px-6'>
         {landData.map((land) => (
           <div className='w-full h-96'>
             <LandCard data={land} />
@@ -55,14 +55,8 @@ const Dashboard = () => {
       </div>
       {isLoading && (
         <>
-          <div className='flex justify-center align-middle'>
-            <FadeLoader
-              color='yellow'
-              height={15}
-              width={5}
-              radius={2}
-              margin={2}
-            />
+          <div className='flex justify-center align-middle p-2'>
+            <ClipLoader size={55} color='orange' />
           </div>
         </>
       )}
